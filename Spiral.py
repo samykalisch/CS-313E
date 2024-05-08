@@ -27,7 +27,7 @@ def create_spiral(n):
   #creates a spiral of 1's and a list of the numbers needed,  2*num_layers+ 1  elimminates even numbers
   spiral = [[1 for i in range(2*num_layers+ 1)]for i in range(2*num_layers+ 1)]
   numbers = [i for i in range(2,(2*num_layers+ 1)**2+1)]
-
+  
   #for every layer in the spiral
   for layer in range(1,num_layers+1):
   
@@ -88,6 +88,10 @@ def main():
     total = sum_adjacent_numbers(spiral, int(number))
     # print the result
     print(total)
+  
+  for line in spiral:
+    for number in line:
+      print(f'{number: <4}', end='')
+    print()
 if __name__ == "__main__":
   main()
-\
